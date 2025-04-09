@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Reading Capsule - Subscribe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fef9f4;
+      color: #2c3e50;
+    }
+    header {
+      background-color: #fce8d5;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid #dd805c;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      color: #9c4f3d;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #7f8c8d;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f8e6da;
+      padding: 10px 0;
+      border-bottom: 2px solid #dd805c;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #9c4f3d;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #dd805c;
+    }
+    .main-content {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .main-content h2 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #9c4f3d;
+    }
+    .main-content p {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+    input[type="email"] {
+      padding: 12px;
+      width: 40%;
+      border: 2px solid #f5b890;
+      border-radius: 8px;
+      background-color: #fff;
+      margin-right: 10px;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 1em;
+      background-color: #dd805c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #c9654a;
+    }
+    footer {
+      background-color: #fce8d5;
+      padding: 20px;
+      text-align: center;
+      border-top: 3px solid #dd805c;
+    }
+    footer a {
+      margin: 0 10px;
+      color: #9c4f3d;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #dd805c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Reading Capsule</h1>
+    <p>Subscribe to Your Daily Dose of Wisdom & Wit</p>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">📚 The Reading Capsule</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="trending.html">Trending</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="knowledge.html">Knowledge</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="subscribe.html">Subscribe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <h2>Sign Up for Our Newsletter</h2>
+    <p>Enter your email to receive curated content in your inbox every week!</p>
+    <input type="email" id="emailInput" placeholder="Enter your email" required />
+    <button onclick="subscribe()">Subscribe</button>
+  </div>
+
+  <footer>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+  </footer>
+
+  <script>
+    async function subscribe() {
+      const email = document.getElementById('emailInput').value;
+      if (!email) return alert('Please enter a valid email');
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) return alert('Invalid email format');
+
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        const data = await res.json();
+        alert(data.message);
+      } catch (error) {
+        alert('Something went wrong, please try again.');
+      }
+    }
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trending Topics - The Reading Capsule</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #fffaf5;
+      color: #2c3e50;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #fde6d3;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid #db704f;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #9c4f3d;
+      font-size: 2.8em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f9e2d1;
+      padding: 10px;
+      border-bottom: 2px solid #db704f;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #9c4f3d;
+      font-weight: bold;
+      margin: 8px 15px;
+    }
+
+    nav a:hover {
+      color: #db704f;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #9c4f3d;
+      text-align: center;
+    }
+
+    .fact {
+      background: #fff2e6;
+      border-left: 5px solid #db704f;
+      margin: 15px 0;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background-color: #fde6d3;
+      text-align: center;
+      padding: 20px;
+      border-top: 3px solid #db704f;
+      margin-top: 40px;
+    }
+
+    footer a {
+      margin: 0 10px;
+      color: #9c4f3d;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #db704f;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The Reading Capsule</h1>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">📚 The Reading Capsule</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="trending.html">Trending</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="knowledge.html">Knowledge</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="subscribe.html">Subscribe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Trending Topics</h2>
+    <div class="fact" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+      <img src="lakersThunder.jpeg" alt="Lakers vs Thunder" style="width: 100px; height: 70px; object-fit: cover; border-radius: 6px;">
+      <div>
+        <a href="lakers-vs-thunder.html" target="_blank" style="color: #e84e40; text-decoration: none; font-weight: bold;">
+          Lakers vs Thunder: A Rivalry Renewed in 2025 – Game Highlights & Historical Recap
+        </a>
+      </div>
+    </div>
+    
+
+    <div class="fact" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+      <img src="womens.jpg" alt="Women's March Madness 2025" style="width: 100px; height: 70px; object-fit: cover; border-radius: 6px;">
+      <div>
+        <a href="march-madness.html" target="_blank" style="color: #e84e40; text-decoration: none; font-weight: bold;">
+          🏀 Women’s March Madness 2025: A Slam Dunk for Equality, Talent, and Legacy
+        </a>
+      </div>
+    </div>
+
+    <div class="fact" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?fit=crop&w=100&q=80" alt="Men's March Madness" style="width: 100px; height: 70px; object-fit: cover; border-radius: 6px;">
+        <div>
+          <a href="mens-march-madness.html" target="_blank" style="color: #d32f2f; text-decoration: none; font-weight: bold;">
+            🏀 Men's March Madness: The Ultimate Guide to College Basketball's Biggest Stage
+          </a>
+        </div>
+    </div>
+
+  <div class="fact" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+      <img src="bitcoinn.jpg" alt="Bitcoin" style="width: 100px; height: 70px; object-fit: cover; border-radius: 6px;">
+      <div>
+        <a href="bitcoin.html" target="_blank" style="color: #d32f2f; text-decoration: none; font-weight: bold;">
+    🪙 Dive into the World of Bitcoin: Read Full Blog Post        </a>
+      </div>
+  </div>
+
+  <div class="fact" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+    <img src="nationalchampionship.jpg" alt="national-championship" style="width: 100px; height: 70px; object-fit: cover; border-radius: 6px;">
+    <div>
+      <a href="national-championship.html" target="_blank" style="color: #d32f2f; text-decoration: none; font-weight: bold;">
+        🏆 The National Championship: Where Legends Are Made       </a>
+    </div>
+</div>
+
+<div class="fact" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+  <img src="rcbvsmi.jpg" alt="rcb-vs-mi" style="width: 100px; height: 70px; object-fit: cover; border-radius: 6px;">
+  <div>
+    <a href="ipl-2025-rcb-vs-mi.html" target="_blank" style="color: #d32f2f; text-decoration: none; font-weight: bold;">
+      🏏 IPL 2025: Royal Challengers Bengaluru vs. Mumbai Indians – A Thrilling Encounter       </a>
+  </div>
+</div>
+
+<div class="fact" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+  <img src="arsenalvsrealmadrid.jpg" alt="rcb-vs-mi" style="width: 100px; height: 70px; object-fit: cover; border-radius: 6px;">
+  <div>
+    <a href="Arsenal-Real-Madrid.html" target="_blank" style="color: #d32f2f; text-decoration: none; font-weight: bold;">
+      UEFA Champions League: Arsenal vs Real Madrid – Quarter-Final 2025     </a>
+  </div>
+</div>
+<div class="fact" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+  <img src="melone.jpg" alt="rcb-vs-mi" style="width: 100px; height: 70px; object-fit: cover; border-radius: 6px;">
+  <div>
+    <a href="Melone.html" target="_blank" style="color: #d32f2f; text-decoration: none; font-weight: bold;">
+      Michael J. Melone is a seasoned cybersecurity professional.....     </a>
+  </div>
+</div>
+
+    </div>
+    
+    
+
+  <footer>
+    <p>&copy; 2025 The Reading Capsule</p>
+    <a href="/about.html">About Us</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Use</a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

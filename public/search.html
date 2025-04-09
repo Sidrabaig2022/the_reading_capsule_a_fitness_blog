@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search Results - The Reading Capsule</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { padding: 2rem; font-family: 'Segoe UI', sans-serif; background-color: #fff0f5; }
+    .result { padding: 1rem; background-color: #fff; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+  </style>
+</head>
+<body>
+  <h1 class="mb-4">🔍 Search Results for "<span id="queryDisplay"></span>"</h1>
+
+  <div id="resultsContainer">
+    <!-- Results will appear here -->
+  </div>
+
+  <script>
+    // Sample posts (you can replace with real content)
+    const posts = [
+      {
+        title: "🏆 National Championship Blog",
+        content: "All about the NCAA Men’s Basketball National Championship.",
+        link: "national-championship.html"
+      },
+      {
+        title: "🏏 IPL 2025: RCB vs MI",
+        content: "Match summary and analysis of the RCB vs MI 2025 IPL thriller.",
+        link: "ipl-rcb-vs-mi.html"
+      },
+      {
+        title: "💡 100 Amazing Science Facts",
+        content: "Explore curious facts in science and nature.",
+        link: "science-nature.html"
+      }
+    ];
+
+    // Get query from URL
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get("q")?.toLowerCase() || "";
+    document.getElementById("queryDisplay").textContent = query;
+
+    const resultsContainer = document.getElementById("resultsContainer");
+
+    if (query) {
+      const matched = posts.filter(post =>
+        post.title.toLowerCase().includes(query) ||
+        post.content.toLowerCase().includes(query)
+      );
+
+      if (matched.length > 0) {
+        matched.forEach(post => {
+          const div = document.createElement("div");
+          div.classList.add("result");
+          div.innerHTML = `<h4><a href="${post.link}">${post.title}</a></h4><p>${post.content}</p>`;
+          resultsContainer.appendChild(div);
+        });
+      } else {
+        resultsContainer.innerHTML = `<p>No results found for "<strong>${query}</strong>".</p>`;
+      }
+    } else {
+      resultsContainer.innerHTML = "<p>Please enter a search term.</p>";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Knowledge Categories - The Reading Capsule</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fffaf5;
+      color: #2c3e50;
+    }
+
+    header {
+      background-color: #fde6d3;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid #db704f;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #9c4f3d;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f9e2d1;
+      padding: 10px 0;
+      border-bottom: 2px solid #db704f;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #9c4f3d;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #db704f;
+    }
+
+    .container {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #9c4f3d;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fef4ec;
+      padding: 20px;
+      border: 2px solid #f5b08c;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: #f9d3b6;
+      transform: translateY(-5px);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #9c4f3d;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    footer {
+      background-color: #fde6d3;
+      padding: 20px;
+      text-align: center;
+      border-top: 3px solid #db704f;
+    }
+
+    footer a {
+      margin: 0 10px;
+      color: #9c4f3d;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #db704f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Reading Capsule</h1>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">📚 The Reading Capsule</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="trending.html">Trending</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="knowledge.html">Knowledge</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="subscribe.html">Subscribe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Explore Knowledge Categories</h2>
+    <div class="grid">
+      <div class="card"><a href="science-nature.html">Science & Nature</a></div>
+      <div class="card"><a href="history-politics.html">History & Politics</a></div>
+      <div class="card"><a href="technology-innovation.html">Technology & Innovation</a></div>
+      <div class="card"><a href="human-body-health.html">Human Body & Health</a></div>
+      <div class="card"><a href="geography-earth.html">Geography & Earth</a></div>
+      <div class="card"><a href="arts-culture.html">Arts & Culture</a></div>
+      <div class="card"><a href="space-astronomy.html">Space & Astronomy</a></div>
+      <div class="card"><a href="psychology.html">Psychology & Mind</a></div>
+      <div class="card"><a href="languages-and-linguistics.html">Languages & Linguistics</a></div>
+      <div class="card"><a href="miscellaneous-wonders.html">Miscellaneous Wonders</a></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 The Reading Capsule</p>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-use.html">Terms of Use</a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

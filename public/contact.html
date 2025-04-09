@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - The Reading Capsule</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fefaf6;
+      color: #2c3e50;
+    }
+
+    header {
+      background-color: #fde6d3;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid #db704f;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      color: #9c4f3d;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f9e2d1;
+      padding: 10px 0;
+      border-bottom: 2px solid #db704f;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #9c4f3d;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #db704f;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #9c4f3d;
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      background: #fffaf5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(255, 160, 122, 0.3);
+    }
+
+    input, textarea {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 12px;
+      border: 2px solid #f5b08c;
+      border-radius: 8px;
+      font-size: 1em;
+      background-color: #fff;
+    }
+
+    button {
+      background-color: #db704f;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c4523b;
+    }
+
+    .message {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #fde6d3;
+      padding: 20px;
+      text-align: center;
+      border-top: 3px solid #db704f;
+    }
+
+    footer a {
+      margin: 0 10px;
+      color: #9c4f3d;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #db704f;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The Reading Capsule</h1>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">📚 The Reading Capsule</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="trending.html">Trending</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="knowledge.html">Knowledge</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="subscribe.html">Subscribe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+      <div class="message" id="formMessage"></div>
+    </form>
+  </div>
+
+  <footer>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const formMessage = document.getElementById('formMessage');
+
+      if (!name || !email || !message) {
+        formMessage.textContent = "Please fill in all fields.";
+        formMessage.style.color = "red";
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message })
+        });
+        const data = await res.json();
+        formMessage.textContent = data.message;
+        formMessage.style.color = "green";
+        document.getElementById('contactForm').reset();
+      } catch (err) {
+        formMessage.textContent = "Something went wrong, please try again.";
+        formMessage.style.color = "red";
+      }
+    });
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
