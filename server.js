@@ -5,18 +5,19 @@ const bodyParser = require('body-parser');
 const validator = require('validator');
 const dotenv = require('dotenv');
 
+// Load environment variables
 dotenv.config();
 
 const app = express();
 
-// MongoDB connection
+// Validate Mongo URI
 const MONGO_URI = process.env.MONGO_URI;
-
 if (!MONGO_URI) {
   console.error("❌ MONGO_URI is not defined in environment variables");
-  process.exit(1); // Exit the app
+  process.exit(1);
 }
 
+// Connect to MongoDB
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -24,10 +25,10 @@ mongoose.connect(MONGO_URI, {
 .then(() => console.log('✅ Connected to MongoDB'))
 .catch(err => {
   console.error('❌ MongoDB connection error:', err);
-  process.exit(1); // Exit if connection fails
+  process.exit(1);
 });
 
-// Schemas
+// Define schemas
 const EmailSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
 });
@@ -85,7 +86,7 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
-// Server start
+// Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
