@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin/
 Allow: /
 
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://the-reading-capsule-backend.onrender.com/sitemap.xml
