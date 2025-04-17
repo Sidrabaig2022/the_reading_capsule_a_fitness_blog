@@ -93,5 +93,4 @@ app.listen(PORT, () => {
 });
 
 
-const sitemapRoute = require('./sitemap');
-app.use('/', sitemapRoute);
+
