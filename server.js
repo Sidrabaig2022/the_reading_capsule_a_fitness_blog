@@ -93,23 +93,4 @@ app.listen(PORT, () => {
 });
 
 
-const { SitemapStream, streamToPromise } = require('sitemap');
-const { Readable } = require('stream');
-
-app.get('/sitemap.xml', async (req, res) => {
-  const links = [
-    { url: '/', changefreq: 'daily', priority: 1.0 },
-    { url: '/about', changefreq: 'weekly', priority: 0.7 },
-    // Add more pages
-  ];
-
-  const stream = new SitemapStream({ hostname: 'https://the-reading-capsule-backend.onrender.com' });
-  res.header('Content-Type', 'application/xml');
-
-  const xml = await streamToPromise(Readable.from(links).pipe(stream)).then((data) =>
-    data.toString()
-  );
-
-  res.send(xml);
-});
 
