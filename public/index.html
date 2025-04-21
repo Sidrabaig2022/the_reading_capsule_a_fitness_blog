@@ -406,6 +406,91 @@
         margin: 0.5rem 0;
       }
     }
+
+    .main-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark-color);
+      font-weight: 700;
+      margin: 3rem 0 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .main-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--primary-color);
+      border-radius: 2px;
+    }
+    
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark-color);
+      font-weight: 600;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    /* Fitness Cards */
+    .fitness-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: var(--transition);
+      margin-bottom: 2rem;
+      border: none;
+      height: 100%;
+    }
+    
+    .fitness-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .fitness-card:hover .card-img-top {
+      opacity: 0.9;
+    }
+    
+    .card-body {
+      padding: 1.5rem;
+    }
+    
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: var(--dark-color);
+      margin-bottom: 0.75rem;
+    }
+    
+    .card-text {
+      color: var(--text-light);
+      margin-bottom: 1.25rem;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      border: none;
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--dark-color);
+      transform: translateY(-2px);
+    }
   </style>
 </head>
 <body>
@@ -431,9 +516,7 @@
           <li class="nav-item">
             <a class="nav-link active" href="index.html">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="fitgirls.html">Fat To Fit</a>
-          </li>
+        
           <li class="nav-item">
             <a class="nav-link" href="subscribe.html">Subscribe</a>
           </li>
@@ -517,8 +600,87 @@
       </div>
     </div>
   </section>
+
+  <section>
+    <main class="container">
+      <h1 class="main-title text-center">Start Your Fat to Fit Journey <i class="bi bi-heart-fill text-danger"></i></h1>
+      
+      <div class="row">
+        <!-- Fitness Card 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card fitness-card">
+            <img src="afterave-essentials-BPINS9X3mjo-unsplash.jpg" class="card-img-top" alt="Metabolism Guide">
+            <div class="card-body">
+              <h5 class="card-title">Boost Your Metabolism</h5>
+              <p class="card-text">Learn how to improve your digestion and naturally boost your metabolism for better weight loss results.</p>
+              <a href="metabolism.html" class="btn btn-primary">Read Guide</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Fitness Card 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card fitness-card">
+            <img src="dane-wetton-t1NEMSm1rgI-unsplash.jpg" class="card-img-top" alt="Home Workouts">
+            <div class="card-body">
+              <h5 class="card-title">Beginner Home Workouts</h5>
+              <p class="card-text">Simple exercises you can do at home with no equipment to kickstart your fitness journey.</p>
+              <a href="home_workout.html" class="btn btn-primary">Start Working Out</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Fitness Card 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card fitness-card">
+            <img src="logan-weaver-lgnwvr-9D_rUDe7xvA-unsplash.jpg" class="card-img-top" alt="Fat Burning">
+            <div class="card-body">
+              <h5 class="card-title">10-Minute Fat Burner</h5>
+              <p class="card-text">Quick workouts that actually burn fat - perfect for busy schedules.</p>
+              <a href="burns_fat.html" class="btn btn-primary">Burn Fat Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Fitness Card 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card fitness-card">
+            <img src="bruce-mars-gJtDg6WfMlQ-unsplash.jpg" class="card-img-top" alt="Getting Started">
+            <div class="card-body">
+              <h5 class="card-title">Starting From Scratch</h5>
+              <p class="card-text">A complete guide for absolute beginners who want to get in shape.</p>
+              <a href="Out_of_Shape.html" class="btn btn-primary">Begin Journey</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Fitness Card 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card fitness-card">
+            <img src="fitnish-media-DxFozuSMGyU-unsplash.jpg" class="card-img-top" alt="No Cardio">
+            <div class="card-body">
+              <h5 class="card-title">Weight Loss Without Cardio</h5>
+              <p class="card-text">Alternative ways to lose weight if you hate running or traditional cardio.</p>
+              <a href="no_cardio.html" class="btn btn-primary">Discover How</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Fitness Card 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card fitness-card">
+            <img src="gold-touch-nutrition-roUf4cg0I5I-unsplash.jpg" class="card-img-top" alt="30-Day Guide">
+            <div class="card-body">
+              <h5 class="card-title">30-Day Weight Loss Guide</h5>
+              <p class="card-text">A month-long plan designed for those who want effective but manageable workouts.</p>
+              <a href="fitness.html" class="btn btn-primary">Get the Plan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
   
-  <!-- Newsletter Section -->
+  <!-- Newsletter Section --
   <section class="newsletter-section">
     <div class="container text-center">
       <h3 class="newsletter-title">Get Weekly Fitness Tips</h3>
@@ -534,7 +696,7 @@
       </form>
     </div>
   </section>
-  
+  --->
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
