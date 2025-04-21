@@ -1,3 +1,15 @@
 User-agent: *
 Allow: /
 Sitemap: https://the-reading-capsule-backend.onrender.com
+Sitemap: https://the-reading-capsule-backend.onrender.com/fitness.html
+Sitemap: https://the-reading-capsule-backend.onrender.com/abs.html
+Sitemap: https://the-reading-capsule-backend.onrender.com/index.html
+Sitemap: https://the-reading-capsule-backend.onrender.com/fitgirls.html
+Sitemap: https://the-reading-capsule-backend.onrender.com/subscribe.html
+Sitemap: https://the-reading-capsule-backend.onrender.com/contact.html
+Sitemap: https://the-reading-capsule-backend.onrender.com/about.html
+Sitemap: https://the-reading-capsule-backend.onrender.com/metabolism.html
+Sitemap: https://the-reading-capsule-backend.onrender.com/home_workout.html
+Sitemap: https://the-reading-capsule-backend.onrender.com/burns_fat.html
+Sitemap: https://the-reading-capsule-backend.onrender.com/Out_of_Shape.html
+Sitemap: https://the-reading-capsule-backend.onrender.com/no_cardio.html
