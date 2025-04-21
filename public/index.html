@@ -1,187 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="https://analytics.ahrefs.com/analytics.js" data-key="55yMagVyv0nbaAenkaLLwA" async></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="IBrZQ9a_BlJGaMtGdtq-dbSXJH-fsJrUgFN8yFEQCO0" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The Reading Capsule is your cozy space for fitness, wellness, and lifestyle glow-ups. Join thousands of women on their fun and empowering journey from fat to fit." />
-  <meta name="keywords" content="fitness for women, lazy girl workouts, fat to fit journey, ab workouts, wellness tips, meal plans, free printables, The Reading Capsule" />
-  <meta name="author" content="The Reading Capsule Team" />
-  <meta name="robots" content="index, follow" />
-  <meta name="google-site-verification" content="IBrZQ9a_BlJGaMtGdtq-dbSXJH-fsJrUgFN8yFEQCO0" />
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Reading Capsule is your cozy space for fitness, wellness, and lifestyle glow-ups. Join thousands of women on their fun and empowering journey from fat to fit.">
+  <meta name="keywords" content="fitness for women, lazy girl workouts, fat to fit journey, ab workouts, wellness tips, meal plans, free printables, The Reading Capsule">
+  <meta name="author" content="The Reading Capsule Team">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="IBrZQ9a_BlJGaMtGdtq-dbSXJH-fsJrUgFN8yFEQCO0">
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="The Reading Capsule – Fat to Fit for Real Girls 💖" />
-  <meta property="og:description" content="Join The Reading Capsule for cute workouts, easy meal plans, and glow-up guides designed for real women." />
-  <meta property="og:image" content="https://https://the-reading-capsule-backend.onrender.com/images/og-image.jpg" />
-  <meta property="og:url" content="https://the-reading-capsule-backend.onrender.com" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Reading Capsule – Fat to Fit for Real Girls 💖">
+  <meta property="og:description" content="Join The Reading Capsule for cute workouts, easy meal plans, and glow-up guides designed for real women.">
+  <meta property="og:image" content="https://the-reading-capsule-backend.onrender.com/images/og-image.jpg">
+  <meta property="og:url" content="https://the-reading-capsule-backend.onrender.com">
+  <meta property="og:type" content="website">
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Reading Capsule – Fat to Fit for Real Girls 💖" />
-  <meta name="twitter:description" content="Glow up your lifestyle with lazy-girl workouts, meal plans, mindset tips, and free trackers." />
-  <meta name="twitter:image" content="https://https://the-reading-capsule-backend.onrender.com/images/twitter-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Reading Capsule – Fat to Fit for Real Girls 💖">
+  <meta name="twitter:description" content="Glow up your lifestyle with lazy-girl workouts, meal plans, mindset tips, and free trackers.">
+  <meta name="twitter:image" content="https://the-reading-capsule-backend.onrender.com/images/twitter-image.jpg">
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5470855224612506"
+  <!-- Analytics -->
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="55yMagVyv0nbaAenkaLLwA" async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5470855224612506" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WMGFJ4HKX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7WMGFJ4HKX');
+  </script>
 
-     crossorigin="anonymous"></script>
-     <link rel="icon" href="favicon(7).ico" type="image/x-icon">
-     
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WMGFJ4HKX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Favicon -->
+  <link rel="icon" href="favicon(7).ico" type="image/x-icon">
 
-  gtag('config', 'G-7WMGFJ4HKX');
-</script>
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 
-  <title>The Reading Capsule</title>
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>The Reading Capsule | Fat to Fit Journey for Women</title>
+
   <style>
+    :root {
+      --primary-color: #ff4d6d;
+      --secondary-color: #ff8fa3;
+      --accent-color: #ffb3c1;
+      --dark-color: #590d22;
+      --light-color: #fff0f3;
+      --text-color: #333;
+      --text-light: #666;
+      --white: #fff;
+      --transition: all 0.3s ease;
+    }
+    
     body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #fff8f0;
-      color: #2c3e50;
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-color);
+      background-color: var(--white);
+      line-height: 1.6;
     }
-    header {
-      background-color: #ffe6cc;
-      padding: 20px;
+    
+    /* Header Styles */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      padding: 4rem 0;
       text-align: center;
-      border-bottom: 3px solid #ff6f61;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
     }
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      color: #b85c38;
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+      opacity: 0.3;
     }
-    header p {
-      font-size: 1.2em;
-      color: #7f8c8d;
+    
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      position: relative;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     }
-    nav {
+    
+    .hero-subtitle {
+      font-size: 1.5rem;
+      opacity: 0.9;
+      position: relative;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+    
+    /* Navigation */
+    .navbar {
+      background-color: var(--white);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      padding: 0.8rem 1rem;
+    }
+    
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: var(--dark-color);
+      font-size: 1.4rem;
+    }
+    
+    .navbar-brand i {
+      color: var(--primary-color);
+      margin-right: 0.5rem;
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      color: var(--text-color);
+      padding: 0.5rem 1rem;
+      margin: 0 0.2rem;
+      border-radius: 0.5rem;
+      transition: var(--transition);
+    }
+    
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary-color);
+      background-color: var(--light-color);
+    }
+    
+    .navbar-toggler {
+      border: none;
+      padding: 0.5rem;
+    }
+    
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+    
+    /* Search Bar */
+    .search-container {
+      max-width: 700px;
+      margin: 2rem auto;
+      position: relative;
+    }
+    
+    .search-input {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border: 2px solid var(--accent-color);
+      border-radius: 50px;
+      font-size: 1rem;
+      transition: var(--transition);
+      padding-right: 50px;
+    }
+    
+    .search-input:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.2);
+    }
+    
+    .search-button {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .search-button:hover {
+      background: var(--dark-color);
+      transform: scale(1.05);
+    }
+    
+    /* Feature Cards */
+    .feature-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: var(--transition);
+      margin-bottom: 2rem;
+      border: none;
+      height: 100%;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .feature-img {
+      height: 200px;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .feature-card:hover .feature-img {
+      opacity: 0.9;
+    }
+    
+    .feature-body {
+      padding: 1.5rem;
+    }
+    
+    .feature-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: var(--dark-color);
+      margin-bottom: 0.75rem;
+    }
+    
+    .feature-text {
+      color: var(--text-light);
+      margin-bottom: 1.25rem;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      border: none;
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--dark-color);
+      transform: translateY(-2px);
+    }
+    
+    /* Welcome Section */
+    .welcome-section {
+      padding: 4rem 0;
+      background-color: var(--light-color);
+      margin: 3rem 0;
+    }
+    
+    .welcome-image {
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      width: 100%;
+      height: auto;
+    }
+    
+    .welcome-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark-color);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    
+    .welcome-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    
+    .highlight-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .highlight-list li {
+      margin-bottom: 0.75rem;
+      position: relative;
+      padding-left: 1.75rem;
+    }
+    
+    .highlight-list li::before {
+      content: '•';
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      position: absolute;
+      left: 0;
+      top: -3px;
+    }
+    
+    /* Newsletter Section */
+    .newsletter-section {
+      background: linear-gradient(135deg, var(--light-color), var(--white));
+      padding: 3rem 0;
+      margin: 3rem 0;
+      border-radius: 12px;
+    }
+    
+    .newsletter-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark-color);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .newsletter-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .newsletter-input {
+      padding: 1rem;
+      border: 2px solid var(--accent-color);
+      border-radius: 50px;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    
+    .newsletter-input:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: var(--dark-color);
+      color: var(--white);
+      padding: 3rem 0 1.5rem;
+      margin-top: 3rem;
+    }
+    
+    .footer-links {
       display: flex;
       justify-content: center;
-      background-color: #fff0e6;
-      padding: 10px 0;
-      border-bottom: 2px solid #f39c12;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
     }
-    nav a {
-      margin: 0 15px;
+    
+    .footer-link {
+      color: var(--white);
       text-decoration: none;
-      color: #b85c38;
-      font-weight: bold;
+      margin: 0 1rem;
+      opacity: 0.8;
+      transition: var(--transition);
     }
-    nav a:hover {
-      color: #ff6f61;
+    
+    .footer-link:hover {
+      color: var(--accent-color);
+      opacity: 1;
     }
-    .search-bar {
+    
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    
+    .social-icon {
+      color: var(--white);
+      font-size: 1.5rem;
+      margin: 0 0.75rem;
+      transition: var(--transition);
+    }
+    
+    .social-icon:hover {
+      color: var(--accent-color);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
       text-align: center;
-      margin: 20px;
+      opacity: 0.7;
+      font-size: 0.9rem;
     }
-    .search-bar input {
-      padding: 10px;
-      width: 50%;
-      border: 2px solid #ffb347;
-      border-radius: 8px;
-      background-color: #fffaf0;
-      color: #333;
-    }
-    .main-content {
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .main-content img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 15px;
-      border: 2px solid #ffb347;
-    }
-    .main-content p {
-      font-size: 1.1em;
-      line-height: 1.8;
-    }
-    .newsletter {
-      text-align: center;
-      margin: 40px 0;
-    }
-    .newsletter input {
-      padding: 10px;
-      width: 40%;
-      margin-right: 10px;
-      border: 2px solid #f39c12;
-      border-radius: 5px;
-      background-color: #fffaf0;
-      color: #333;
-    }
-    .newsletter button {
-      padding: 12px 25px;
-      font-size: 1em;
-      background-color: #ff6f61;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .newsletter button:hover {
-      background-color: #e74c3c;
-    }
-    footer {
-      background-color: #ffe6cc;
-      padding: 20px;
-      text-align: center;
-      border-top: 3px solid #ff6f61;
-    }
-    footer a {
-      margin: 0 10px;
-      color: #b85c38;
-      text-decoration: none;
-    }
-    footer a:hover {
-      color: #ff6f61;
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .welcome-section {
+        padding: 2rem 0;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .footer-link {
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container py-5">
-    <h1 class="text-center mb-4">📚 The Reading Capsule</h1>
-    <div class="row">
-      <div class="col-md-6 col-12 mb-3">
-        <div class="p-4 border rounded shadow-sm bg-light">
-          <h3>Lazy Girl’s 30-Day Fitness Challenge</h3>
-          <p>Simple, cute, and effective routines to get you glowing from Day 1 to Day 30 💖</p>
-          <a href="fitness.html" class="btn btn-primary">Read More</a>
-        </div>
-      </div>
-      <div class="col-md-6 col-12 mb-3">
-        <div class="p-4 border rounded shadow-sm bg-light">
-          <h3>15 Killer Ab Workouts to Sculpt Your Core </h3>
-          <p>Looking for the ultimate list of ab workouts that actually work? Whether you're on a weight loss journey, toning up for summer, or just want a stronger core, these 15 ab exercises will fire up your midsection and get you closer to those dream abs. No equipment. No gym. Just you and your mat!</p>
-          <a href="abs.html" class="btn btn-primary">Explore</a>
-        </div>
-      </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">The Reading Capsule</h1>
+      <p class="hero-subtitle">Your journey from Fat to Fit starts here</p>
     </div>
-  </div>
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">📚 The Reading Capsule</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  </section>
+  
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-book"></i> The Reading Capsule
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="fitgirls.html">Fat To Fit</a>
@@ -195,23 +443,122 @@
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
-          
         </ul>
       </div>
     </div>
   </nav>
   
+  <!-- Featured Content -->
+  <section class="container py-5">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="feature-img" alt="30-Day Fitness Challenge">
+          <div class="feature-body">
+            <h3 class="feature-title">Lazy Girl's 30-Day Fitness Challenge</h3>
+            <p class="feature-text">Simple, cute, and effective routines to get you glowing from Day 1 to Day 30 💖</p>
+            <a href="fitness.html" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 mb-4">
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="feature-img" alt="Ab Workouts">
+          <div class="feature-body">
+            <h3 class="feature-title">15 Killer Ab Workouts to Sculpt Your Core</h3>
+            <p class="feature-text">The ultimate list of ab workouts that actually work. No equipment needed - just you and your mat!</p>
+            <a href="abs.html" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   
-
-  <div class="search-bar" style="display: flex; align-items: center;">
-    <input id="searchInput" type="text" placeholder="Search The Reading Capsule..." 
-           onkeypress="handleKeyPress(event)"
-           style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px 0 0 4px;" />
-    <button type="button" onclick="performSearch()" 
-            style="border: none; background: #fff; padding: 8px; border: 1px solid #ccc; border-left: none; border-radius: 0 4px 4px 0; cursor: pointer;">
-      <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search" style="width: 20px; height: 20px;" />
-    </button>
+  <!-- Search Bar -->
+  <div class="container">
+    <div class="search-container">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search The Reading Capsule..." onkeypress="handleKeyPress(event)">
+      <button class="search-button" onclick="performSearch()">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
   </div>
+  
+  <!-- Welcome Section -->
+  <section class="welcome-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <img src="gabin-vallet-J154nEkpzlQ-unsplash.jpg" alt="Fitness Blog" class="welcome-image">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="welcome-title">Welcome to <strong>The Reading Capsule</strong></h2>
+          <p class="welcome-text">
+            Your cozy corner of the internet for fitness, wellness, and feel-good routines that actually fit your lifestyle.
+          </p>
+          <p class="welcome-text">
+            Whether you're a total beginner, a busy babe on-the-go, or just tired of toxic fitness culture — you're in the right place. Here, we believe fitness should feel fun, doable, and empowering. ✨
+          </p>
+          
+          <h5 class="mt-4 mb-3"><strong>Explore:</strong></h5>
+          <ul class="highlight-list">
+            <li>💪 Lazy-girl workouts that burn fat (no cardio required!)</li>
+            <li>🍑 Sculpting guides for abs, booty, arms & more</li>
+            <li>🧘 Wellness tips, glow-up challenges & mindset makeovers</li>
+            <li>🥗 Easy meal plans + recipes for your fitness goals</li>
+            <li>📥 Free printables, trackers, and ebooks to stay on track</li>
+          </ul>
+          
+          <p class="welcome-text">
+            Join thousands of women getting stronger, healthier, and happier — one small step at a time. Let's glow up together. 💖
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Newsletter Section -->
+  <section class="newsletter-section">
+    <div class="container text-center">
+      <h3 class="newsletter-title">Get Weekly Fitness Tips</h3>
+      <p class="mb-4">Subscribe to our newsletter for exclusive content and motivation!</p>
+      
+      <form class="newsletter-form row g-3 justify-content-center">
+        <div class="col-md-8">
+          <input type="email" class="form-control newsletter-input" placeholder="Your email address" required>
+        </div>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="about.html" class="footer-link">About Us</a>
+        <a href="contact.html" class="footer-link">Contact Us</a>
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="terms.html" class="footer-link">Terms of Use</a>
+        <a href="disclaimer.html" class="footer-link">Disclaimer</a>
+      </div>
+      
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-pinterest"></i></a>
+      </div>
+      
+      <p class="copyright">© 2025 The Reading Capsule. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
   <script>
     function performSearch() {
@@ -226,47 +573,7 @@
         performSearch();
       }
     }
-  </script>
-  
     
-
-  
-  <div class="main-content">
-    <img src="ChatGPT Image Apr 16, 2025, 12_54_45 PM.png" alt="My fitness blog." />
-    <p>
-      Welcome to <strong>The Reading Capsule( Your journey from fat to fit) </strong> — your cozy corner of the internet for fitness, wellness, and feel-good routines that actually fit your lifestyle.    </p>
-    <p>
-      Whether you’re a total beginner, a busy babe on-the-go, or just tired of toxic fitness culture — you’re in the right place. Here, we believe fitness should feel fun, doable, and empowering. ✨<br>
-
-      <strong>Explore: </strong><br>💪 Lazy-girl workouts that burn fat (no cardio required!) <br>
-      🍑 Sculpting guides for abs, booty, arms & more <br>
-      🧘 Wellness tips, glow-up challenges & mindset makeovers <br>
-      🥗 Easy meal plans + recipes for your fitness goals <br>
-      📥 Free printables, trackers, and ebooks to stay on track <br>
-      
-      Join thousands of women getting stronger, healthier, and happier — one small step at a time. Let’s glow up together. 💖    </p>
-  </div>
-
-  <div class="newsletter">
-    <input type="email" id="emailInput" placeholder="Enter your email" required />
-    <button onclick="subscribe()">Sign Up for Newsletter</button>
-  </div>
-  <div class="footer">
-    ...
-    <a href="https://www.sigmatraffic.com?ref=xxxx">Buy traffic for your website</a>
-    ...
-  </div>
-
-  <footer>
-    <p>&copy; 2025 The Reading Capsule</p>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Use</a>
-    <a href="disclaimer.html">Disclaimer</a>
-  </footer>
-
-  <script>
     async function subscribe() {
       const email = document.getElementById('emailInput').value;
       if (!email) return alert('Please enter a valid email');
@@ -281,7 +588,5 @@
       alert(data.message);
     }
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
