@@ -2,98 +2,207 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Disclaimer for The Reading Capsule">
-  <meta name="robots" content="index, follow">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5470855224612506"
-     crossorigin="anonymous"></script>
-     <link rel="icon" href="favicon(7).ico" type="image/x-icon">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WMGFJ4HKX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7WMGFJ4HKX');
-</script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disclaimer - The Reading Capsule</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="favicon(7).ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WMGFJ4HKX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7WMGFJ4HKX');
+  </script>
 
   <style>
-    footer {
-      background-color: #fde6d3;
-      padding: 20px;
-      text-align: center;
-      border-top: 3px solid #db704f;
+    :root {
+      --primary-color: #6D4C41;
+      --secondary-color: #8D6E63;
+      --accent-color: #D7CCC8;
+      --light-bg: #EFEBE9;
+      --text-color: #3E2723;
+      --light-text: #5D4037;
     }
 
-    footer a {
+    body {
+      font-family: 'Georgia', serif;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background-color: var(--primary-color) !important;
+      padding: 15px 0;
+    }
+
+    .navbar-brand {
+      font-family: 'Georgia', serif;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: white !important;
+    }
+
+    .nav-link {
+      color: var(--accent-color) !important;
+      font-weight: 500;
       margin: 0 10px;
-      color: #9c4f3d;
-      text-decoration: none;
     }
 
-    footer a:hover {
-      color: #db704f;
+    .nav-link:hover, .nav-link.active {
+      color: white !important;
+    }
+
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .policy-container {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      padding: 40px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .policy-title {
+      color: var(--primary-color);
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .policy-section h3 {
+      color: var(--primary-color);
+      font-weight: bold;
+      margin: 30px 0 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-color);
+    }
+
+    .policy-section p {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .footer-links a {
+      color: var(--accent-color);
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .policy-container {
+        padding: 20px;
+      }
+
+      .footer-links a {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
-  <title>Disclaimer - The Reading Capsule</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="container my-5">
-    <h1 class="text-center mb-4">Disclaimer</h1>
-    <div class="card p-4 shadow-lg">
-      <p>
-        The information provided by <strong>The Reading Capsule</strong> (“we,” “us” or “our”) on 
-        <a href="https://the-reading-capsule-backend.onrender.com" target="_blank">https://the-reading-capsule-backend.onrender.com</a> 
-        is for general informational purposes only. All information on the Site is provided in good faith, 
-        however we make no representation or warranty of any kind, express or implied, regarding the accuracy, 
-        adequacy, validity, reliability, availability or completeness of any information on the Site.
-      </p>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-book-reader me-2"></i>The Reading Capsule
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <h4>External Links Disclaimer</h4>
-      <p>
-        The Site may contain (or you may be sent through the Site) links to other websites or content 
-        belonging to or originating from third parties or links to websites and features in banners or 
-        other advertising. Such external links are not investigated, monitored, or checked for accuracy, 
-        adequacy, validity, reliability, availability or completeness by us.
-      </p>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="subscribe.html">Subscribe</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-      <h4>Professional Disclaimer</h4>
-      <p>
-        The Site cannot and does not contain legal, medical, or financial advice. The information is provided 
-        for general informational and educational purposes only and is not a substitute for professional advice. 
-        Accordingly, before taking any actions based upon such information, we encourage you to consult with 
-        the appropriate professionals.
-      </p>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="hero-title">Disclaimer</h1>
+      <p class="lead text-white">Important legal and informational disclosures</p>
+    </div>
+  </section>
 
-      <h4>Fair Use Notice</h4>
-      <p>
-        This website may contain copyrighted material the use of which has not always been specifically 
-        authorized by the copyright owner. We are making such material available for criticism, comment, 
-        news reporting, teaching, scholarship, or research. We believe this constitutes a ‘fair use’ of 
-        any such copyrighted material as provided for in section 107 of the US Copyright Law.
-      </p>
+  <!-- Disclaimer Content -->
+  <div class="container">
+    <div class="policy-container">
+      <h2 class="policy-title">Disclaimer for The Reading Capsule</h2>
 
-      <h4>Consent</h4>
-      <p>
-        By using our website, you hereby consent to our disclaimer and agree to its terms.
-      </p>
+      <div class="policy-section">
+        <h3>1. General Information</h3>
+        <p>The information provided by <strong>The Reading Capsule</strong> ("we", "us", or "our") on <a href="https://the-reading-capsule-backend.onrender.com" target="_blank">our website</a> is for general informational purposes only. While we aim for accuracy, we make no warranties about the completeness, reliability, or suitability of the content.</p>
 
-      <h4>Update</h4>
-      <p>
-        Should we update, amend or make any changes to this document, those changes will be prominently 
-        posted here.
-      </p>
+        <h3>2. External Links Disclaimer</h3>
+        <p>This site may contain links to external websites not provided or maintained by us. We do not guarantee the accuracy, relevance, or reliability of any external content.</p>
+
+        <h3>3. Professional Disclaimer</h3>
+        <p>The Reading Capsule does not offer legal, medical, or financial advice. Content is for informational purposes only and should not be a substitute for professional consultation.</p>
+
+        <h3>4. Fair Use Notice</h3>
+        <p>Some content may include copyrighted material under fair use (e.g. commentary, education, research). We respect copyright laws and encourage others to do the same.</p>
+
+        <h3>5. Consent</h3>
+        <p>By using our website, you hereby consent to our disclaimer and agree to its terms.</p>
+
+        <h3>6. Updates</h3>
+        <p>We reserve the right to update or change this disclaimer at any time. Updates will be clearly posted on this page.</p>
+      </div>
     </div>
   </div>
+
+  <!-- Footer -->
   <footer>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Use</a>
-    <a href="disclaimer.html">Disclaimer</a>
+    <div class="footer-links mb-3">
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+    <p>&copy; 2025 The Reading Capsule. All rights reserved.</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

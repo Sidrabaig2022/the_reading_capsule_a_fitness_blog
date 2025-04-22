@@ -5,135 +5,204 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Terms of Use - The Reading Capsule</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="favicon(7).ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WMGFJ4HKX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7WMGFJ4HKX');
+  </script>
 
   <style>
+    :root {
+      --primary-color: #6D4C41;
+      --secondary-color: #8D6E63;
+      --accent-color: #D7CCC8;
+      --light-bg: #EFEBE9;
+      --text-color: #3E2723;
+      --light-text: #5D4037;
+    }
+
     body {
-      margin: 0;
       font-family: 'Georgia', serif;
-      background-color: #fefaf6;
-      color: #2c3e50;
+      background-color: var(--light-bg);
+      color: var(--text-color);
       line-height: 1.6;
     }
-    header {
-      background-color: #fde6d3;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 3px solid #db704f;
+
+    .navbar {
+      background-color: var(--primary-color) !important;
+      padding: 15px 0;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      color: #9c4f3d;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #f9e2d1;
-      padding: 10px 0;
-      border-bottom: 2px solid #db704f;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #9c4f3d;
+
+    .navbar-brand {
+      font-family: 'Georgia', serif;
       font-weight: bold;
+      font-size: 1.5rem;
+      color: white !important;
     }
-    nav a:hover {
-      color: #db704f;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      color: #9c4f3d;
-    }
-    footer {
-      background-color: #fde6d3;
-      padding: 20px;
-      text-align: center;
-      border-top: 3px solid #db704f;
-      margin-top: 40px;
-    }
-    footer a {
+
+    .nav-link {
+      color: var(--accent-color) !important;
+      font-weight: 500;
       margin: 0 10px;
-      color: #9c4f3d;
-      text-decoration: none;
     }
-    footer a:hover {
-      color: #db704f;
+
+    .nav-link:hover, .nav-link.active {
+      color: white !important;
+    }
+
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .policy-container {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      padding: 40px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .policy-title {
+      color: var(--primary-color);
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .policy-section h3 {
+      color: var(--primary-color);
+      font-weight: bold;
+      margin: 30px 0 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-color);
+    }
+
+    .policy-section p {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .footer-links a {
+      color: var(--accent-color);
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .policy-container {
+        padding: 20px;
+      }
+
+      .footer-links a {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>The Reading Capsule</h1>
-  </header>
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">📚 The Reading Capsule</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-book-reader me-2"></i>The Reading Capsule
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          
-        
-          <li class="nav-item">
-            <a class="nav-link" href="subscribe.html">Subscribe</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>          
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="subscribe.html">Subscribe</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="terms.html">Terms</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="hero-title">Terms of Use</h1>
+      <p class="lead text-white">Understand your rights and responsibilities</p>
+    </div>
+  </section>
+
+  <!-- Terms Content -->
   <div class="container">
-    <h2>Terms of Use</h2>
-    <p>Welcome to The Reading Capsule. By accessing our website, you agree to the following terms:</p>
+    <div class="policy-container">
+      <h2 class="policy-title">Website Terms and Conditions</h2>
 
-    <h3>1. Use of Content</h3>
-    <p>All content is for personal, non-commercial use. Do not copy, distribute, or republish without permission.</p>
+      <div class="policy-section">
+        <h3>1. Use of Content</h3>
+        <p>All content on this website is intended for personal, non-commercial use only. Do not reproduce, distribute, or republish any material without our written consent.</p>
 
-    <h3>2. User Conduct</h3>
-    <p>Users must not submit harmful, offensive, or misleading content through forms or interactions on the site.</p>
+        <h3>2. User Conduct</h3>
+        <p>Users are prohibited from posting or transmitting any unlawful, harmful, or offensive content. Abusive behavior and spam will not be tolerated.</p>
 
-    <h3>3. Subscriptions & Emails</h3>
-    <p>By subscribing, you agree to receive emails from us. You may unsubscribe at any time.</p>
+        <h3>3. Subscriptions & Communication</h3>
+        <p>By subscribing, you agree to receive periodic emails. You may opt out at any time using the unsubscribe link in our emails.</p>
 
-    <h3>4. Limitation of Liability</h3>
-    <p>We are not responsible for any damages resulting from the use of this website or its content.</p>
+        <h3>4. Limitation of Liability</h3>
+        <p>We are not liable for any direct or indirect damages resulting from your use of this site. Content is provided "as is" without warranties of any kind.</p>
 
-    <h3>5. Changes to Terms</h3>
-    <p>We may update these terms at any time. Continued use of the site means you accept the new terms.</p>
+        <h3>5. Updates to Terms</h3>
+        <p>We reserve the right to update these terms at any time. Continued use of the website signifies your acceptance of any changes.</p>
 
-    <h3>6. Contact</h3>
-    <p>If you have any questions, feel free to <a href="/contact.html">contact us</a>.</p>
+        <h3>6. Contact Us</h3>
+        <p>If you have any questions regarding these terms, please <a href="contact.html">contact us</a>.</p>
+      </div>
+    </div>
   </div>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 The Reading Capsule</p>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Use</a>
-    <a href="disclaimer.html">Disclaimer</a>
-
+    <div class="footer-links mb-3">
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+    <p>&copy; 2025 The Reading Capsule. All rights reserved.</p>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

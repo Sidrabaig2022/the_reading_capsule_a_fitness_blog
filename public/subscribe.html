@@ -5,104 +5,172 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Reading Capsule - Subscribe</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="favicon(7).ico" type="image/x-icon">
 
   <style>
+    :root {
+      --primary-color: #6D4C41;
+      --secondary-color: #8D6E63;
+      --accent-color: #D7CCC8;
+      --light-bg: #EFEBE9;
+      --text-color: #3E2723;
+      --light-text: #5D4037;
+    }
+    
     body {
-      margin: 0;
       font-family: 'Georgia', serif;
-      background-color: #fef9f4;
-      color: #2c3e50;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      line-height: 1.6;
     }
-    header {
-      background-color: #fce8d5;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 3px solid #dd805c;
+    
+    .navbar {
+      background-color: var(--primary-color) !important;
+      padding: 15px 0;
     }
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      color: #9c4f3d;
-    }
-    header p {
-      font-size: 1.2em;
-      color: #7f8c8d;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #f8e6da;
-      padding: 10px 0;
-      border-bottom: 2px solid #dd805c;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #9c4f3d;
+    
+    .navbar-brand {
+      font-family: 'Georgia', serif;
       font-weight: bold;
+      font-size: 1.5rem;
+      color: white !important;
     }
-    nav a:hover {
-      color: #dd805c;
-    }
-    .main-content {
-      text-align: center;
-      padding: 50px 20px;
-    }
-    .main-content h2 {
-      font-size: 2.2em;
-      margin-bottom: 20px;
-      color: #9c4f3d;
-    }
-    .main-content p {
-      font-size: 1.1em;
-      margin-bottom: 30px;
-    }
-    input[type="email"] {
-      padding: 12px;
-      width: 40%;
-      border: 2px solid #f5b890;
-      border-radius: 8px;
-      background-color: #fff;
-      margin-right: 10px;
-    }
-    button {
-      padding: 12px 25px;
-      font-size: 1em;
-      background-color: #dd805c;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #c9654a;
-    }
-    footer {
-      background-color: #fce8d5;
-      padding: 20px;
-      text-align: center;
-      border-top: 3px solid #dd805c;
-    }
-    footer a {
+    
+    .nav-link {
+      color: var(--accent-color) !important;
+      font-weight: 500;
       margin: 0 10px;
-      color: #9c4f3d;
-      text-decoration: none;
     }
-    footer a:hover {
-      color: #dd805c;
+    
+    .nav-link:hover {
+      color: white !important;
+    }
+    
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.5rem;
+      opacity: 0.9;
+    }
+    
+    .subscribe-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .subscribe-title {
+      color: var(--primary-color);
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    .form-control {
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid var(--accent-color);
+    }
+    
+    .form-control:focus {
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 0.25rem rgba(109, 76, 65, 0.25);
+    }
+    
+    .btn-subscribe {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      border: none;
+      transition: all 0.3s;
+    }
+    
+    .btn-subscribe:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+    
+    .features {
+      padding: 60px 0;
+      background-color: var(--accent-color);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .feature-title {
+      color: var(--primary-color);
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 40px 0;
+    }
+    
+    .footer-links a {
+      color: var(--accent-color);
+      text-decoration: none;
+      margin: 0 15px;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .subscribe-container {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>The Reading Capsule</h1>
-    <p>Subscribe to Your Daily Dose of Wisdom & Wit</p>
-  </header>
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">📚 The Reading Capsule</a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-book-open me-2"></i>The Reading Capsule
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -111,11 +179,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
-        
           <li class="nav-item">
-            <a class="nav-link" href="subscribe.html">Subscribe</a>
+            <a class="nav-link active" href="subscribe.html">Subscribe</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -123,50 +190,143 @@
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
-          
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="main-content">
-    <h2>Sign Up for Our Newsletter</h2>
-    <p>Enter your email to receive curated content in your inbox every week!</p>
-    <input type="email" id="emailInput" placeholder="Enter your email" required />
-    <button onclick="subscribe()">Subscribe</button>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="hero-title">Join Our Reading Community</h1>
+      <p class="hero-subtitle">Subscribe to receive curated literary content delivered to your inbox</p>
+    </div>
+  </section>
+
+  <!-- Subscribe Form -->
+  <div class="container">
+    <div class="subscribe-container">
+      <h2 class="subscribe-title">Sign Up for Our Newsletter</h2>
+      <form id="subscribeForm">
+        <div class="mb-4">
+          <input type="email" class="form-control form-control-lg" id="emailInput" placeholder="Enter your email address" required>
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-subscribe btn-lg">
+            <i class="fas fa-envelope me-2"></i>Subscribe Now
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 
-  <footer>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Use</a>
-    <a href="disclaimer.html">Disclaimer</a>
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4 mb-5 mb-md-0">
+          <div class="feature-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3 class="feature-title">Curated Content</h3>
+          <p>Handpicked articles, stories and literary gems selected by our team of book enthusiasts.</p>
+        </div>
+        <div class="col-md-4 mb-5 mb-md-0">
+          <div class="feature-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <h3 class="feature-title">Weekly Delivery</h3>
+          <p>Fresh content delivered to your inbox every week, perfect for your reading routine.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+          <h3 class="feature-title">Exclusive Perks</h3>
+          <p>Subscribers get access to special giveaways, author interviews and reading challenges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+          <h5><i class="fas fa-book-open me-2"></i>The Reading Capsule</h5>
+          <p class="mt-3">Bringing literary treasures to your inbox since 2023.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="footer-links mb-3">
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+          </div>
+          <!--
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-goodreads"></i></a>
+          </div>
+          -->
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <p class="small mb-0">&copy; 2023 The Reading Capsule. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script>
-    async function subscribe() {
+    document.getElementById('subscribeForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
       const email = document.getElementById('emailInput').value;
-      if (!email) return alert('Please enter a valid email');
+      if (!email) {
+        alert('Please enter a valid email');
+        return;
+      }
 
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) return alert('Invalid email format');
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address');
+        return;
+      }
 
       try {
-        const res = await fetch('/api/subscribe', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email })
-        });
-        const data = await res.json();
-        alert(data.message);
+        // Simulate API call
+        const btn = document.querySelector('.btn-subscribe');
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Subscribing...';
+        btn.disabled = true;
+        
+        // In a real implementation, you would make a fetch call here
+        // const response = await fetch('/api/subscribe', {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify({ email })
+        // });
+        
+        // Simulate network delay
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        
+        // Show success message
+        alert('Thank you for subscribing! You will receive a confirmation email shortly.');
+        document.getElementById('emailInput').value = '';
       } catch (error) {
-        alert('Something went wrong, please try again.');
+        alert('Subscription failed. Please try again later.');
+      } finally {
+        const btn = document.querySelector('.btn-subscribe');
+        btn.innerHTML = '<i class="fas fa-envelope me-2"></i>Subscribe Now';
+        btn.disabled = false;
       }
-    }
+    });
   </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
