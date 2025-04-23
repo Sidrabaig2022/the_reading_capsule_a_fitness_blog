@@ -35,6 +35,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        .nav-link:hover {
+  color: #2563eb !important;
+}
+
+.nav-link:hover span:last-child {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-link i {
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover i {
+  transform: translateX(3px);
+}
         :root {
             --primary: #3a86ff;
             --secondary: #8338ec;
@@ -330,7 +346,18 @@
             </div>
         </div>
     </div>
-    
+    <li class="nav-item ms-3">
+        <a class="nav-link fw-semibold text-decoration-none position-relative px-2" 
+           href="index.html"
+           style="color: #3a86ff; transition: all 0.3s ease;">
+          <span class="d-inline-flex align-items-center">
+            <i class="fas fa-arrow-circle-right me-2" style="color: #3a86ff;"></i>
+            Read more related articles here
+          </span>
+          <span class="position-absolute bottom-0 start-0 w-100 bg-primary" 
+                style="height: 2px; transform: scaleX(0); transform-origin: right; transition: transform 0.3s ease;"></span>
+        </a>
+      </li>
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
