@@ -14,6 +14,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise Routine Guide</title>
     <style>
+         .footer {
+      background-color: var(--dark-color);
+      color: var(--white);
+      padding: 3rem 0 1.5rem;
+      margin-top: 3rem;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-link {
+      color: var(--white);
+      text-decoration: none;
+      margin: 0 1rem;
+      opacity: 0.8;
+      transition: var(--transition);
+    }
+    
+    .footer-link:hover {
+      color: var(--accent-color);
+      opacity: 1;
+    }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -147,9 +173,40 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
+        .navbar {
+      background-color: var(--primary-color) !important;
+      padding: 15px 0;
+    }
+
+    .navbar-brand {
+      font-family: 'Georgia', serif;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: white !important;
+    }
+
+    .nav-link {
+      color: var(--accent-color) !important;
+      font-weight: 500;
+      margin: 0 10px;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: white !important;
+    }
+        
     </style>
 </head>
 <body>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="subscribe.html">Subscribe</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="terms.html">Terms</a></li>
+        </ul>
+      </div>
     <h1>Can I Keep Exercising, or Can I Start a New Exercise Routine?</h1>
     
     <div class="section">
@@ -295,6 +352,26 @@
         
         <div id="planResult" style="margin-top: 20px;"></div>
     </div>
+    <footer class="footer">
+        <div class="container">
+          <div class="footer-links">
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="contact.html" class="footer-link">Contact Us</a>
+            <a href="privacy.html" class="footer-link">Privacy Policy</a>
+            <a href="terms.html" class="footer-link">Terms of Use</a>
+            <a href="disclaimer.html" class="footer-link">Disclaimer</a>
+          </div>
+          <!----
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-pinterest"></i></a>
+          </div>
+        -->
+          <p class="copyright">© 2025 The Reading Capsule. All rights reserved.</p>
+        </div>
+      </footer>
     
     <script>
         function showWorkoutForm() {
